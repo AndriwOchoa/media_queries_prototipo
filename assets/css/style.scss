@@ -268,6 +268,12 @@ body{
                 }
             }
         }
+
+        footer{
+            a{
+                font-size: 5em;
+            }
+        }
     }
     
 }
@@ -285,13 +291,13 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .roboto-light {
     font-family: "Roboto", sans-serif;
     font-weight: 350;
     font-style: normal;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   
