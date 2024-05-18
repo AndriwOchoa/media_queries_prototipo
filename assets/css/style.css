@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "footer";
+  grid-template-rows: 4em 4em 1fr 3em;
+  height: 100vh;
+  margin: 0;
+}
+body header {
+  grid-area: header;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: relative;
+}
+body header .header_title {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+body header .header_nav #menu_btn {
+  display: none;
+}
+body header .header_nav #menu_btn:checked ~ nav {
+  height: 10em;
+  padding: 1em;
+}
+body header .header_nav nav {
+  position: absolute;
+  top: 100%;
+  background-color: grey;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+}
+body header .header_nav ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+}
+body aside {
+  grid-area: aside;
+  background: rgb(31, 135, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body aside .order {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+body main {
+  grid-area: main;
+  overflow: auto;
+}
+body main .cards_container {
+  display: flex;
+  flex-flow: column;
+}
+body main .cards_container .cards {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 1em;
+  gap: 0.5em;
+}
+body main .cards_container .cards img {
+  width: 10em;
+}
+body main .cards_container .cards button {
+  border: solid black;
+  width: 6em;
+  color: white;
+  background-color: rgb(0, 35, 75);
+}
+body footer {
+  grid-area: footer;
+  background: rgb(0, 35, 75);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+body footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  body {
+    grid-template-areas: "header header header" "aside main main" "footer footer footer";
+    grid-template-rows: 4em 1fr 3em;
+    grid-template-columns: 10em 1fr;
+  }
+  body header .header_nav #menu_btn {
+    display: none;
+  }
+  body header .header_nav label {
+    display: none;
+  }
+  body header .header_nav nav {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    height: auto;
+    overflow: visible;
+  }
+  body header .header_nav nav ul {
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  body main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  body main .cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    justify-content: center;
+  }
+  body main .cards_container .cards {
+    padding: 1em;
+    border-radius: 1em;
+    gap: 0.5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+  font-size: 0.9em;
+}/*# sourceMappingURL=style.css.map */
